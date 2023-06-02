@@ -5,7 +5,7 @@ export function Profile() {
     <ProfileContainer>
       <ProfileBox>
         <ProfilePhoto>
-          <h1>Teste</h1>
+          <h1>Foto</h1>
         </ProfilePhoto>
         <ProfileDataContainer>
           <ProfileTitleAndLinkContainer>
@@ -13,9 +13,17 @@ export function Profile() {
             <a href="">GITHUB</a>
           </ProfileTitleAndLinkContainer>
           <ProfileResumeContainer>
-            <p>bla bla bla</p>
+            <p>
+              Tristique volutpat pulvinar vel massa, pellentesque egestas. 
+              Eu viverra massa quam dignissim aenean malesuada suscipit. 
+              Nunc, volutpat pulvinar vel mass.
+            </p>
           </ProfileResumeContainer>
-      
+          <ProfileIconsAndDataContainer>
+            <ProfileIconsAndData>
+              Aqui
+            </ProfileIconsAndData>
+          </ProfileIconsAndDataContainer>
         </ProfileDataContainer>
       </ProfileBox>
     </ProfileContainer>

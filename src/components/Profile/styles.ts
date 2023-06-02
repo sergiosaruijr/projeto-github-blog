@@ -57,6 +57,7 @@ export const ProfileTitleAndLinkContainer = styled.div`
 export const ProfileResumeContainer = styled.div`
   display: flex;
   width: 38.25rem;
+  margin-top: 0.5rem;
 
   p{
     font-size: ${props => props.theme.textSizes['text-M']};
@@ -67,6 +68,7 @@ export const ProfileIconsAndDataContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.5rem;
 `
 
 export const ProfileIconsAndData = styled.div`

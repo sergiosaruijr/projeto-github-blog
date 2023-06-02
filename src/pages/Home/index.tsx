@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header';
+import { IssueCard } from '../../components/IssueCard';
 import { Profile } from '../../components/Profile';
-import { HomeContainer } from './styles';
+import { HomeContainer} from './styles';
 
 export function Home() {
   return(
@@ -8,7 +9,15 @@ export function Home() {
     <Header />
     <Profile />
     <HomeContainer>
-      <h1>Home Page</h1>
+      {/* <IssueContainer>
+        <div>
+          <h1>Home Page 1</h1>
+        </div>
+        <div>
+          <h1>Home Page 2</h1>
+        </div>
+      </IssueContainer> */}
+      <IssueCard />
     </HomeContainer>
     </>
   )
