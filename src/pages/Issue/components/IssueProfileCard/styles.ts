@@ -13,7 +13,7 @@ export const IssueProfileContainer = styled.section`
 export const IssueProfileBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 13.25rem;
+  height: 10.5rem;
   width: 54rem;
   background: ${props => props.theme.colors['base-profile']};
 
@@ -25,22 +25,22 @@ export const IssueProfileBox = styled.div`
 export const IssueProfileDataContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* height: 9.25rem; */
-  /* width: 38.25rem; */
   margin-top: 2.5rem;
-  /* margin-right: 2rem; */
+  padding-left: 2rem;
 `
 
 export const IssueProfileReturnAndLinkContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  width: 54rem;
   a{
     font-size: ${props => props.theme.textSizes['link']};
     color: ${props => props.theme.colors['blue']};
     margin-bottom: 1rem;
     text-decoration: none;
+    padding-right: 4rem;
+    
   }
 `
 export const IssueProfileNameContainer = styled.div`
@@ -56,15 +56,14 @@ export const IssueProfileNameContainer = styled.div`
 `
 export const IssueProfileIconsAndDataContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  gap: 2rem;
 `
 
 export const IssueProfileIconsAndData = styled.div`
   display: flex;
   height: 1.625rem;
-  justify-content: space-between;
   align-items: center;
 
   p {

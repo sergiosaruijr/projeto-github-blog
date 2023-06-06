@@ -9,7 +9,7 @@ export function IssueProfileCard() {
       <IssueProfileBox>
         <IssueProfileDataContainer>
           <IssueProfileReturnAndLinkContainer>
-            <NavLink to='/'><a href="">Voltar</a></NavLink>
+            <NavLink to='/'><a href="">VOLTAR</a></NavLink>
             <a href="">GITHUB</a>
           </IssueProfileReturnAndLinkContainer>
           <IssueProfileNameContainer>
@@ -19,7 +19,10 @@ export function IssueProfileCard() {
           </IssueProfileNameContainer>
           <IssueProfileIconsAndDataContainer>
             <IssueProfileIconsAndData>
-            Algo
+              Algo
+            </IssueProfileIconsAndData>
+            <IssueProfileIconsAndData>
+              Algo
             </IssueProfileIconsAndData>
           </IssueProfileIconsAndDataContainer>
         </IssueProfileDataContainer>
