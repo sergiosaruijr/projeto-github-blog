@@ -1,11 +1,19 @@
 import { useEffect, useState } from 'react'
 
+interface User {
+  login: string;
+  company: string;
+  followers: number;
+}
+
 export function Teste2() {
-  
+  const [ user, setUser ] = useState<User>()
+
   async function loadUser() {
     const response = await fetch('https://api.github.com/users/sergiosaruijr');
     const data = await response.json();
 
+    setUser(data)
     console.log(data)
   }
 
@@ -13,21 +21,20 @@ export function Teste2() {
     loadUser()
   }, [])
 
+  function ExistOrNotCompany() {
+    if (user?.company != null) {
+      return user.company
+    }else{
+      return 'null'
+    }
+  }
+
   return (
-
-    <h1>Oi</h1>
-
-    // <ul>
-    //     {user.map((item: any, index: any) => {
-    //       return(
-    //         <div key={index}>
-    //           <li>
-    //             <p>{item.owner.login}</p>
-    //             <p>{item.owner.followers_url}</p>
-    //           </li>
-    //         </div>
-    //       )
-    //     })}
-    //   </ul>
+    <>
+      <h1>Oi</h1>
+      <h1>{user?.login}</h1>
+      <h1>{ExistOrNotCompany()}</h1>
+      <p>{user?.followers}</p>
+    </>
   );
 }

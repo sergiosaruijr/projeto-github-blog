@@ -1,6 +1,17 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { ProfileBox, ProfileContainer, ProfileDataContainer, ProfileIconsAndData, ProfileIconsAndDataContainer, ProfilePhoto, ProfileResumeContainer, ProfileTitleAndLinkContainer } from './styles';
 import api from '../../services/api';
+import { Buildings, Users} from 'phosphor-react'
+import { GithubOutlined } from '@ant-design/icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
+interface User {
+  login: string;
+  company: string;
+  followers: number;
+  name: string;
+}
 
 export function Profile() {
   // const [ infoProfiles, setInfoProfile] = useState([])
@@ -11,11 +22,27 @@ export function Profile() {
   //   .then(data => setInfoProfile(data))
   // }, [])
 
-  const [repos, setRepos] = useState ([])
+  const [ user, setUser ] = useState<User>()
+
+  async function loadUser() {
+    const response = await fetch('https://api.github.com/users/sergiosaruijr');
+    const data = await response.json();
+
+    setUser(data)
+    console.log(data)
+  }
 
   useEffect(() => { 
-    api.get('').then( info => setRepos(info.data))
-  } ,[])
+    loadUser()
+  }, [])
+
+  function ExistOrNotCompany() {
+    if (user?.company != null) {
+      return user.company
+    }else{
+      return 'null'
+    }
+  }
 
   return (
     <ProfileContainer>
@@ -24,14 +51,13 @@ export function Profile() {
           <h1>Foto</h1>
         </ProfilePhoto>
         <ProfileDataContainer>
-          {/* {infoProfiles.map(infoProfile => {
-            return(
-              <h3>{infoProfile.name}</h3>
-            )
-          })} */}
           <ProfileTitleAndLinkContainer>
-            <strong>Sergio Akira Sarui Junior</strong>
-            <a href="">GITHUB</a>
+            <strong>{user?.name}</strong>
+            {/* arrumar espaçamento */}
+              <a href="">
+                GITHUB
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
           </ProfileTitleAndLinkContainer>
           <ProfileResumeContainer>
             <p>
@@ -49,7 +75,16 @@ export function Profile() {
                 )
             })} */}
             <ProfileIconsAndData>
-              Aqui
+              <GithubOutlined size={18}/>
+              <p>{user?.login}</p>
+            </ProfileIconsAndData>
+            <ProfileIconsAndData>
+              <Buildings size={18} weight="fill"/>
+              <p>{ExistOrNotCompany()}</p>
+            </ProfileIconsAndData>
+            <ProfileIconsAndData>
+              <Users size={18} weight='fill'/>
+              <p>{user?.followers}</p>
             </ProfileIconsAndData>
           </ProfileIconsAndDataContainer>
         </ProfileDataContainer>
