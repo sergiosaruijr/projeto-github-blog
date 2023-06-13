@@ -37,8 +37,8 @@ export const IssueCardTitleAndTimeContainer = styled.div`
   padding-bottom: 1.25rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  /* align-items: center;
-  justify-content: space-between; */
+
+  justify-content: space-between;
  
   strong{
     font-size: ${props => props.theme.textSizes['title-M']};

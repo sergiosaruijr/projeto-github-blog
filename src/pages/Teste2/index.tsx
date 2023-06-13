@@ -4,6 +4,7 @@ interface User {
   login: string;
   company: string;
   followers: number;
+  avatar_url: string;
 }
 
 export function Teste2() {
@@ -35,6 +36,8 @@ export function Teste2() {
       <h1>{user?.login}</h1>
       <h1>{ExistOrNotCompany()}</h1>
       <p>{user?.followers}</p>
+      <img src={user?.avatar_url} alt="" />
+
     </>
   );
 }

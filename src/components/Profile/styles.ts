@@ -38,6 +38,7 @@ export const ProfileDataContainer = styled.div`
   width: 38.25rem;
   margin-top: 2.5rem;
   margin-right: 2rem;
+  margin-left: 2rem;
 `
 
 export const ProfileTitleAndLinkContainer = styled.div`
@@ -48,7 +49,6 @@ export const ProfileTitleAndLinkContainer = styled.div`
   div {
     background: ${props => props.theme.colors['base-background']};
     width: 4.2rem;
-    gap: 0.5rem;
   }
   strong{
     font-size: ${props => props.theme.textSizes['title-L']};
