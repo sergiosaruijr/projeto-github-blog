@@ -1,16 +1,21 @@
-import { ReactNode, useEffect, useState } from 'react';
-import { ProfileBox, ProfileContainer, ProfileDataContainer, ProfileIconsAndData, ProfileIconsAndDataContainer, ProfilePhoto, ProfileResumeContainer, ProfileTitleAndLinkContainer } from './styles';
-import api from '../../services/api';
+import { useEffect, useState } from 'react';
+import { 
+  ProfileBox, ProfileContainer, ProfileDataContainer, ProfileIconsAndData, 
+  ProfileIconsAndDataContainer, ProfilePhoto, ProfileResumeContainer, ProfileTitleAndLinkContainer 
+} from './styles';
 import { Buildings, Users} from 'phosphor-react'
 import { GithubOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 interface User {
   login: string;
   company: string;
   followers: number;
   name: string;
+  avatar_url: string;
+  html_url: string;
 }
 
 export function Profile() {
@@ -48,16 +53,17 @@ export function Profile() {
     <ProfileContainer>
       <ProfileBox>
         <ProfilePhoto>
-          <h1>Foto</h1>
+          <img src={user?.avatar_url} alt="" />
         </ProfilePhoto>
         <ProfileDataContainer>
           <ProfileTitleAndLinkContainer>
             <strong>{user?.name}</strong>
             {/* arrumar espaçamento */}
-              <a href="">
+              <NavLink to={`${user?.html_url}`}>
                 GITHUB
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </a>
+              </NavLink>
+
           </ProfileTitleAndLinkContainer>
           <ProfileResumeContainer>
             <p>

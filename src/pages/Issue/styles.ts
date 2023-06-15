@@ -17,7 +17,7 @@ export const IssueBoxContainer = styled.div`
   width: 53.375rem;
   height: 26.375rem;
 
-  background: ${props => props.theme.colors['base-span']};
+  /* background: ${props => props.theme.colors['base-span']}; */
 `
 
 export const IssueContentContainer =styled.div`

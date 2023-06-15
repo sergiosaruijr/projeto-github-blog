@@ -26,9 +26,14 @@ export const ProfilePhoto = styled.div`
   height: 9.25rem;
   width: 9.25rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   margin-left: 2.5rem;
-  background: ${props => props.theme.colors['base-label']};
+  border-radius: 8px;
+
+  img {
+    width: 9.25rem;
+    height: 9.25rem;
+    border-radius: 8px;
+  }
 `
 
 export const ProfileDataContainer = styled.div`

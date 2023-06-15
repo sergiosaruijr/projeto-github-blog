@@ -33,15 +33,45 @@ export const IssueProfileReturnAndLinkContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 54rem;
-  a{
+  width: 50rem;
+  /* a{
     font-size: ${props => props.theme.textSizes['link']};
     color: ${props => props.theme.colors['blue']};
     margin-bottom: 1rem;
     text-decoration: none;
-    padding-right: 4rem;
-    
+    gap: 2rem;
+    margin-right: 0.5rem;
+
+    span{
+      margin-left: 0.5rem ;
+    }
+
+    &:hover{
+      text-decoration: underline;
+      text-decoration-thickness: 5px; 
+      transition: 2s;
+    }
+  } */
+
+  button{
+    background: transparent;
+    border: none;
+    margin-bottom: 0.5rem;
+    border: 2px solid transparent;
+
+    &:hover{
+      border-bottom: 2px solid ${props => props.theme.colors['blue']};
+      /* text-decoration: underline solid ${props => props.theme.colors['blue']} 8%; */
+      transition: 0.8s;
+    }
+
+    a {
+      font-size: ${props => props.theme.textSizes['link']};
+      color: ${props => props.theme.colors['blue']};
+      text-decoration: none;
+    }
   }
+
 `
 export const IssueProfileNameContainer = styled.div`
   display: flex;
@@ -65,10 +95,12 @@ export const IssueProfileIconsAndData = styled.div`
   display: flex;
   height: 1.625rem;
   align-items: center;
+  color: ${props => props.theme.colors['base-label']};
 
   p {
     font-size: ${props => props.theme.textSizes['text-M']};
-    color: ${props => props.theme.colors['base-subtitle']};
+    color: ${props => props.theme.colors['base-span']};
+    margin-left: 0.5rem;
   }
 `
 

@@ -7,12 +7,12 @@ import { Teste2 } from './pages/Teste2'
 
 
 export function Router() {
-  const index = Number;
+  // const index = Number;
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       {/* <Route path="/issue" element={<Issue />} /> */}
-      <Route path={`/issue/${index}`} element={<Issue />} />
+      <Route path={`/issue/:index`} element={<Issue />} />
       <Route path="/teste" element={<Teste />} />
       <Route path="/teste2" element={<Teste2 />} />
     </Routes>
