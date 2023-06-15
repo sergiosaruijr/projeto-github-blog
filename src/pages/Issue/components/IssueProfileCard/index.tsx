@@ -29,14 +29,14 @@ interface Issue {
 export function IssueProfileCard() {
   const [Issue, setIssue] = useState<Issue>()
   const {index} = useParams()
-  console.log(index)
+  // console.log(index)
 
   useEffect(() => { 
     api.get(`repos/sergiosaruijr/projeto-github-blog/issues/${index}`).then( info => setIssue(info.data))
     // api.get(`/repos`).then( info => console.log(info.data))
   } ,[])
 
-  console.log(Issue?.number)
+  // console.log(Issue?.number)
 
   dayjs.extend(isLeapYear) 
   dayjs.locale('pt-br') 
@@ -57,7 +57,7 @@ export function IssueProfileCard() {
             
            
            <button>
-              <NavLink to={`/${Issue?.html_url}`}>
+              <NavLink to={`${Issue?.html_url}`}>
                 VER NO GITHUB
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
               </NavLink>

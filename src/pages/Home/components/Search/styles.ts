@@ -40,7 +40,7 @@ export const SearchForm = styled.form`
     /* padding: 1rem; */
 
     &::placeholder {
-      color: ${props => props.theme.colors['base-text']};
+      color: ${props => props.theme.colors['base-label']};
     }
   }
 `

@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header`
   margin: 0 auto;
   margin-left: 15rem;
   margin-right: 15rem;
+  width: 90rem;
 
   background: ${props => props.theme.colors['base-post']};
 `

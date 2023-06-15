@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Header } from '../../components/Header';
 import { IssueProfileCard } from './components/IssueProfileCard';
 import { IssueBoxContainer, IssueContainer, IssueContentContainer } from './styles';
 import api from '../../services/api';
 import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'https://esm.sh/react-markdown@7'
+import ReactMarkdown from 'react-markdown'
 
 interface Issue {
-  body: string;
+  body: any;
 }
 
 export function Issue() {
@@ -28,7 +28,6 @@ export function Issue() {
         <IssueBoxContainer>
           <IssueContentContainer>
             <ReactMarkdown>{Issue?.body}</ReactMarkdown>
-            
           </IssueContentContainer>
         </IssueBoxContainer>
         

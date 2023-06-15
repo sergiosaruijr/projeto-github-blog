@@ -6,8 +6,8 @@ import * as dayjs from 'dayjs'
 import * as isLeapYear from 'dayjs/plugin/isLeapYear' 
 import 'dayjs/locale/pt-br' 
 import relativeTime from 'dayjs/plugin/relativeTime'
-
-
+import ReactMarkdown from 'react-markdown'
+// import Search from '../../pages/Home/components/Search'
 
 export function IssueCard() {
   const [repos, setRepos] = useState([])
@@ -25,7 +25,7 @@ export function IssueCard() {
   return(
     <IssueCardContainer>
         {repos.map((item: any) => {
-          console.log(item.number)
+          // console.log(item.title)
           const index = item.number
           return(
             <button key={index}>
@@ -39,32 +39,13 @@ export function IssueCard() {
               </IssueCardTitleAndTimeContainer>
               <IssueResumeContainer>
                 <p>
-                  {item.body}
+                  <ReactMarkdown>{item.body}</ReactMarkdown>
                 </p>
               </IssueResumeContainer>
             </NavLink>
           </button>
           )
         })}
-
-      {/* <button>
-        <NavLink to='/issue' >
-          <IssueCardTitleAndTimeContainer>
-            <strong> 
-              JavaScript data types and data structures
-            </strong>
-            <span> Há 1 dia </span>
-          </IssueCardTitleAndTimeContainer>
-          <IssueResumeContainer>
-            <p>
-              Programming languages all have built-in data structures, 
-              but these often differ from one language to another. 
-              This article attempts to list the built-in data structures available in 
-            </p>
-          </IssueResumeContainer>
-        </NavLink>
-      </button> */}
-      
     </IssueCardContainer>
   )
 }

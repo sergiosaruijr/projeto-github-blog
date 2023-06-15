@@ -11,15 +11,6 @@ export function Teste() {
     // api.get(`/repos`).then( info => console.log(info.data))
   } ,[])
 
-  // useEffect(() => {
-  //   api
-  //    .get("users/sergiosaruijr")
-  //    .then((response) => setRepos(response.data))
-  //    .catch((err) => {
-  //     console.error("ops! ocorreu um erro" + err);
-  //    });
-  //  }, []);
-
 
   return (
     <>
@@ -27,7 +18,11 @@ export function Teste() {
       <ul>
         {repos.map((item: any) => {
           const days = dataFormatter.format(new Date(item.created_at))
-          console.log(parseInt(days))
+          // console.log(parseInt(days))
+          console.log(item.title)
+          if (item.title === 'Teste'){
+            return <p>{item.title}</p> 
+          }
           return(
             <li>
                   <p>{item.title}</p> 
@@ -39,11 +34,6 @@ export function Teste() {
           )
         })}
       </ul>
-      {/* {repos.map((item: any) => {
-        return(
-          <h1>{item.owner.login}</h1>
-        )
-      })} */}
     </>
   )
 }

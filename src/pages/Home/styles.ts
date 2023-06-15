@@ -8,7 +8,7 @@ export const HomeContainer = styled.main`
   margin: 0 auto;
   margin-left: 15rem;
   margin-right: 15rem;
-
+  width: 90rem;
   background: ${props => props.theme.colors['base-background']};
 `
 export const HomeContentContainer =styled.div`
