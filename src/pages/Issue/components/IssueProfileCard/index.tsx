@@ -51,14 +51,14 @@ export function IssueProfileCard() {
             <button>
               <NavLink to='/'>
                 <FontAwesomeIcon icon={faChevronLeft} />
-                VOLTAR
+                <span>VOLTAR</span> 
               </NavLink>
             </button>
             
            
            <button>
               <NavLink to={`${Issue?.html_url}`}>
-                VER NO GITHUB
+                <span>VER NO GITHUB</span> 
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
               </NavLink>
            </button>

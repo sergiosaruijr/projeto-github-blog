@@ -59,10 +59,13 @@ export function Profile() {
           <ProfileTitleAndLinkContainer>
             <strong>{user?.name}</strong>
             {/* arrumar espaçamento */}
-              <NavLink to={`${user?.html_url}`}>
-                GITHUB
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </NavLink>
+              <button>
+                <NavLink to={`${user?.html_url}`}>
+                  <span>GITHUB</span>
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                </NavLink>
+              </button>
+              
 
           </ProfileTitleAndLinkContainer>
           <ProfileResumeContainer>

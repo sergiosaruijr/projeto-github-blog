@@ -51,6 +51,7 @@ export function Teste2() {
       <p>{user?.followers}</p>
       <img src={user?.avatar_url} alt="" />
       <p>{totalIssue?.open_issues}</p>
+      
 
     </>
   );

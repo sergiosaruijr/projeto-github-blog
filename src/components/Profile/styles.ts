@@ -60,18 +60,29 @@ export const ProfileTitleAndLinkContainer = styled.div`
     color:  ${props => props.theme.colors['base-title']};
   }
 
-  a{
-    /* height: 1.2; */
-    color: ${props => props.theme.colors['blue']};
-    font-size: ${props => props.theme.textSizes['link']};
-    margin-bottom: 1rem;
-    margin-right: 0.5rem;
-    
-    h3{
-      margin-left: 0.5rem;
+  button{
+    background: transparent;
+    border: none;
+    margin-bottom: 0.5rem;
+    border: 2px solid transparent;
+
+    &:hover{
+      border-bottom: 2px solid ${props => props.theme.colors['blue']};
+      transition: 0.8s;
+    }
+
+    a {
       font-size: ${props => props.theme.textSizes['link']};
+      color: ${props => props.theme.colors['blue']};
+      text-decoration: none;
+    }
+
+    span{
+      margin-right: 0.5rem;
     }
   }
+
+  
 `
 export const ProfileResumeContainer = styled.div`
   display: flex;

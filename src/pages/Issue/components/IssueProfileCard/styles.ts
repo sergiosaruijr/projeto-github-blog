@@ -34,25 +34,6 @@ export const IssueProfileReturnAndLinkContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 50rem;
-  /* a{
-    font-size: ${props => props.theme.textSizes['link']};
-    color: ${props => props.theme.colors['blue']};
-    margin-bottom: 1rem;
-    text-decoration: none;
-    gap: 2rem;
-    margin-right: 0.5rem;
-
-    span{
-      margin-left: 0.5rem ;
-    }
-
-    &:hover{
-      text-decoration: underline;
-      text-decoration-thickness: 5px; 
-      transition: 2s;
-    }
-  } */
-
   button{
     background: transparent;
     border: none;
@@ -61,7 +42,6 @@ export const IssueProfileReturnAndLinkContainer = styled.div`
 
     &:hover{
       border-bottom: 2px solid ${props => props.theme.colors['blue']};
-      /* text-decoration: underline solid ${props => props.theme.colors['blue']} 8%; */
       transition: 0.8s;
     }
 
@@ -69,6 +49,14 @@ export const IssueProfileReturnAndLinkContainer = styled.div`
       font-size: ${props => props.theme.textSizes['link']};
       color: ${props => props.theme.colors['blue']};
       text-decoration: none;
+    }
+
+    span {
+      padding-right: 0.5rem;
+
+      &:first-of-type{
+        padding-left: 0.5rem;
+      }
     }
   }
 

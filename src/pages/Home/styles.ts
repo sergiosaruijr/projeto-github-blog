@@ -19,5 +19,5 @@ export const HomeContentContainer =styled.div`
   display: flex;
   flex-direction: column;
 
-  /* background: ${props => props.theme.colors['base-background']};   */
+  padding-bottom: 14.625rem;
 `

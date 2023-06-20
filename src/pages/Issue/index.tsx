@@ -30,7 +30,6 @@ export function Issue() {
             <ReactMarkdown>{Issue?.body}</ReactMarkdown>
           </IssueContentContainer>
         </IssueBoxContainer>
-        
       </IssueContainer>
     </>
     
