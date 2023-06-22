@@ -14,12 +14,10 @@ interface ItensProps {
 
 type Repos = {
   items?: ItensProps[];
-}[]
-
-
+}
 
 export function IssueCard() {
-  const [repos, setRepos] = useState<Repos>([])
+  const [repos, setRepos] = useState<Repos>()
   const [search, setSearch] = useState('')
 
   useEffect(() => {
@@ -47,7 +45,7 @@ export function IssueCard() {
         </SearchForm>
       </SearchFormContainer>
       <IssueCardContainer>
-        {repos.items?.filter((item: any) => {
+        {repos?.items?.filter((item: any) => {
           return search === ''
             ? item
             : item.title.toLowerCase().includes(search.toLowerCase());
